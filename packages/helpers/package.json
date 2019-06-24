@@ -1,0 +1,32 @@
+{
+  "name": "@hardfist/helpers",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "hardfist <1562502418@qq.com>",
+  "homepage": "https://github.com/hardfist/hardfist_boilerplate#readme",
+  "license": "ISC",
+  "main": "lib/helpers.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardfist/hardfist_boilerplate.git"
+  },
+  "scripts": {
+    "test": "echo success"
+  },
+  "bugs": {
+    "url": "https://github.com/hardfist/hardfist_boilerplate/issues"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
