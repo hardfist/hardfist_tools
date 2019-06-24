@@ -1,0 +1,49 @@
+{
+  "name": "hardfist_boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hardfist/hardfist_boilerplate.git",
+  "author": "hardfist <1562502418@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz",
+    "version": "lerna version --conventional-commits ",
+    "publish": "lerna publish from-package --ignore-prepublish --no-verify-access "
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "lint-staged": {
+    "**/*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "CI=true yarn test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "husky": "^2.4.1",
+    "lerna": "^3.13.1",
+    "lint-staged": "^8.2.1",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  }
+}
