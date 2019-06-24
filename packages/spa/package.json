@@ -1,6 +1,6 @@
 {
   "name": "@hardfist/spa",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "@types/jest": "24.0.15",
     "@types/node": "12.0.10",
