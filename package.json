@@ -8,6 +8,9 @@
   "private": true,
   "scripts": {
     "commit": "git-cz",
+    "clean": "lerna run --stream clean",
+    "build": "lerna run --stream --concurrency 1 --sort build",
+    "test": "lerna run --stream --concurrency 1 --sort test",
     "version": "lerna version --conventional-commits ",
     "publish": "lerna publish from-package --ignore-prepublish --no-verify-access "
   },
