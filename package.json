@@ -12,7 +12,7 @@
     "build": "lerna run --stream --concurrency 1 --sort build",
     "test": "lerna run --stream --concurrency 1 --sort test",
     "version": "lerna version --conventional-commits ",
-    "publish": "lerna publish from-package --ignore-prepublish --no-verify-access "
+    "publish": "lerna publish from-git "
   },
   "workspaces": [
     "packages/*"
@@ -43,6 +43,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
+    "@commitlint/config-lerna-scopes": "^8.0.0",
     "codecov.io": "^0.1.6",
     "husky": "^2.4.1",
     "lerna": "^3.13.1",
