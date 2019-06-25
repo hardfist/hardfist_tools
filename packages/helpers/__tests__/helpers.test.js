@@ -1,7 +1,7 @@
-
-
 const helpers = require('..');
 
 describe('@hardfist/helpers', () => {
-  it('needs tests');
+  test('helpers', () => {
+    expect(helpers(1, 2)).toBe(3);
+  });
 });

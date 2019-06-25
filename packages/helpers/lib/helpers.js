@@ -1,7 +1,5 @@
-
-
 module.exports = helpers;
 
-function helpers() {
-  // TODO
+function helpers(a, b) {
+  return a + b;
 }

@@ -10,9 +10,9 @@
     "commit": "git-cz",
     "clean": "lerna run --stream clean",
     "build": "lerna run --stream --concurrency 1 --sort build",
-    "test": "lerna run --stream --concurrency 1 --sort test",
     "version": "lerna version --conventional-commits ",
-    "publish": "lerna publish from-git "
+    "publish": "lerna publish from-git ",
+    "test": "jest --coverage"
   },
   "workspaces": [
     "packages/*"
@@ -41,13 +41,18 @@
     }
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@commitlint/config-lerna-scopes": "^8.0.0",
+    "babel-jest": "^24.8.0",
     "codecov.io": "^0.1.6",
     "husky": "^2.4.1",
+    "jest": "^24.8.0",
     "lerna": "^3.13.1",
     "lint-staged": "^8.2.1",
+    "react-test-renderer": "^16.8.6",
     "tslint": "^5.18.0",
     "typescript": "^3.5.2"
   }

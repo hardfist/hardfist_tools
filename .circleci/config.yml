@@ -35,4 +35,4 @@ jobs:
 
       # run tests!
       - run: yarn test
-      - run: yarn codecov packages/spa/coverage
+      - run: yarn codecov 
