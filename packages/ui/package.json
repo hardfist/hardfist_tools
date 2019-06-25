@@ -1,0 +1,51 @@
+{
+  "name": "@hardfist/ui",
+  "version": "1.0.0",
+  "description": "ui组件库",
+  "author": "hardfist <1562502418@qq.com>",
+  "homepage": "https://github.com/hardfist/hardfist_boilerplate#readme",
+  "license": "ISC",
+  "main": "lib/ui.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardfist/hardfist_boilerplate.git"
+  },
+  "scripts": {
+    "test": "echo success",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "bugs": {
+    "url": "https://github.com/hardfist/hardfist_boilerplate/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "@types/jest": "^24.0.15",
+    "@types/storybook__react": "^4.0.2",
+    "@types/styled-components": "^4.1.16",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.8.0",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "styled-components": "^4.3.2"
+  }
+}
