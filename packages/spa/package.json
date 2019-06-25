@@ -1,8 +1,8 @@
 {
   "name": "@hardfist/spa",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "dependencies": {
-    "@hardfist/helpers": "^1.0.1",
+    "@hardfist/helpers": "^1.0.2",
     "@types/jest": "24.0.15",
     "@types/node": "12.0.10",
     "@types/react": "16.8.22",
