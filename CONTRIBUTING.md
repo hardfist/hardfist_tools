@@ -47,12 +47,12 @@ $ lerna run --scope {package_name} build # 单独测试某个package
 * 更新changelog.md
 我们还是通过lerna来进行控制
 ```shell
-$ npm run version # 更新版本以及生成changelog
+$ npm run bump # 更新版本以及生成changelog
 ```
 
 ## npm 发包
 ```shell
-$ npm run publish # 发布npm run version生成的新版本库
+$ npm run release # 发布npm run version生成的新版本库
 
 ```
 
