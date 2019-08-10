@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.5.0...@hardfist/spa@0.5.1) (2019-08-10)
+
+
+### Bug Fixes
+
+* 修复publish的相对路径问题 ([1d90d01](https://github.com/hardfist/hardfist_tools/commit/1d90d01))
+
+
+
+
+
 # [0.5.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.4.3...@hardfist/spa@0.5.0) (2019-08-10)
 
 
