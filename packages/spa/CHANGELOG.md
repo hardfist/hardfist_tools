@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.4.3...@hardfist/spa@0.5.0) (2019-08-10)
+
+
+### Features
+
+* 接入rematch ([2f0797e](https://github.com/hardfist/hardfist_tools/commit/2f0797e))
+* 添加unpkg同步 ([31287fb](https://github.com/hardfist/hardfist_tools/commit/31287fb))
+
+
+
+
+
 ## [0.4.3](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.4.2...@hardfist/spa@0.4.3) (2019-08-10)
 
 **Note:** Version bump only for package @hardfist/spa
