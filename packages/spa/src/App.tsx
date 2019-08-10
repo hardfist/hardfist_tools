@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootDispatch, RootState } from './store';
 import styled, { keyframes } from 'styled-components';
 import { GlobalStyle } from './global';
 import { ReactComponent as LogoIcon } from './logo.svg';
@@ -34,6 +36,16 @@ const Link = styled.a`
 `;
 
 const App: React.FC = () => {
+  const { name } = useSelector((state: RootState) => {
+    return { ...state.app };
+  });
+  const dispatch = useDispatch() as RootDispatch;
+  useEffect(() => {
+    const id = setTimeout(() => {
+      dispatch.app.updateNameAsync('redux');
+    });
+    return () => clearTimeout(id);
+  });
   return (
     <>
       <GlobalStyle />
@@ -48,7 +60,7 @@ const App: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn {name}
           </Link>
         </AppHeader>
       </AppWrapper>
