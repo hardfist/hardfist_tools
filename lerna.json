@@ -3,11 +3,22 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
+    "version": {
+      "changelog": true,
+      "conventionalCommits": true,
+      "message": "chore: publish",
+      "push": false
+    },
     "publish": {
-      "ignoreChanges": ["*.md"],
+      "allowBranch": "master",
+      "preDistTag": "next",
+      "ignoreScripts": true,
       "verifyAccess": false,
-      "verifyRegistry": false,
-      "message": "chore: publish"
+      "verifyRegistry": false
     }
-  }
+  },
+  "ignoreChanges": [
+    "*.md",
+    "**/__tests__/**"
+  ]
 }

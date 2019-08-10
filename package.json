@@ -10,9 +10,11 @@
     "commit": "git-cz",
     "clean": "lerna run --stream clean",
     "build": "lerna run --stream --concurrency 1 --sort build",
-    "version": "lerna version --conventional-commits ",
-    "publish": "lerna publish from-git ",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "bump": "lerna version",
+    "release": "lerna publish from-package",
+    "release:next": "lerna publish --bump=prerelease",
+    "release:canary": "lerna publish --canary --yes"
   },
   "workspaces": {
     "packages": [
