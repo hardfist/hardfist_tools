@@ -11,8 +11,11 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "src",
+    "storybook-static"
   ],
+  "unpkg": true,
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.com/"
@@ -24,7 +27,8 @@
   "scripts": {
     "test": "echo success",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": ""
   },
   "bugs": {
     "url": "https://github.com/hardfist/hardfist_boilerplate/issues"

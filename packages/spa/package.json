@@ -2,6 +2,10 @@
   "name": "@hardfist/spa",
   "version": "0.4.3",
   "unpkg": true,
+  "files": [
+    "build",
+    "src"
+  ],
   "dependencies": {
     "@hardfist/helpers": "^1.0.4",
     "@rematch/core": "^1.1.0",
@@ -25,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn build"
   },
   "eslintConfig": {
     "extends": "react-app"
