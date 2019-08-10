@@ -14,7 +14,10 @@
     "bump": "lerna version",
     "release": "lerna publish from-package",
     "release:next": "lerna publish --bump=prerelease",
-    "release:canary": "lerna publish --canary --yes"
+    "release:canary": "lerna publish --canary --yes",
+    "lerna-prepare": "lerna run prepare",
+    "bootstrap": "yarn lerna-prepare",
+    "prebootstrap": "yarn"
   },
   "workspaces": {
     "packages": [
@@ -56,7 +59,6 @@
     "lerna": "^3.13.1",
     "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
-    "tslint": "^5.18.0",
     "typescript": "^3.5.2"
   }
 }

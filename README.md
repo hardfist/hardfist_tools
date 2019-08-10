@@ -4,6 +4,15 @@
  </a>
 </p>
 
+## 安装启动
+通过[yarn workspace](<https://yarnpkg.com/lang/en/docs/workspaces/>
+)管理各个模块 
+
+```
+$ npm install -g yarn // 安装yarn
+$ yarn bootstrap // 安装依赖
+$ cd packages/{具体模块} && yarn start // 进入模块启动
+```
 ## 文档
 | 模块 | 版本 | 文档| 线上地址
 | - | - | - | - |
