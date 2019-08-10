@@ -1,5 +1,5 @@
-import { RootDispatch } from '../store';
-import { delay } from '../utils';
+import { RootDispatch } from 'store';
+import { delay } from 'utils';
 
 const initialState = {
   name: 'react'

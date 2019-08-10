@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootDispatch, RootState } from './store';
+import { RootDispatch, RootState } from 'store';
 import styled, { keyframes } from 'styled-components';
-import { GlobalStyle } from './global';
+import { GlobalStyle } from 'global';
 import { ReactComponent as LogoIcon } from './logo.svg';
 const AppWrapper = styled.div`
   text-align: center;
