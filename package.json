@@ -9,8 +9,8 @@
   "scripts": {
     "commit": "git-cz",
     "clean": "lerna run --stream clean",
-    "build": "lerna run --stream --concurrency 1 --sort build",
-    "test": "jest --coverage",
+    "build": "lerna run --stream  build",
+    "test": "lerna run --stream test",
     "bump": "lerna version",
     "release": "lerna publish from-package",
     "release:next": "lerna publish --bump=prerelease",
