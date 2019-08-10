@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "build/lib",
+    "outDir": "lib",
     "module": "commonjs",
+    "types": [],
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "sourceMap": true,
-    "allowJs": false,
+    "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
     "rootDirs": ["src", "stories"],
@@ -17,7 +18,6 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true

@@ -5,7 +5,7 @@
   "author": "hardfist <1562502418@qq.com>",
   "homepage": "https://github.com/hardfist/hardfist_boilerplate#readme",
   "license": "ISC",
-  "main": "lib/ui.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -28,7 +28,8 @@
     "test": "echo success",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepare": ""
+    "build": "tsc",
+    "prepare": "yarn build && yarn build-storybook"
   },
   "bugs": {
     "url": "https://github.com/hardfist/hardfist_boilerplate/issues"
@@ -53,5 +54,5 @@
   "dependencies": {
     "styled-components": "^4.3.2"
   },
-  "gitHead": "0d50538bc4bfd4e0ffaf5400ce894303272ba86d"
+  "gitHead": "f475c4fb84509ecfb140f57aff0afc9cff85a248"
 }
