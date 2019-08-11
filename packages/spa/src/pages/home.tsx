@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootDispatch, RootState } from 'store';
 import styled, { keyframes } from 'styled-components';
-import { GlobalStyle } from 'global';
+import { Layout } from 'components/layout';
+
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 const AppWrapper = styled.div`
   text-align: center;
 `;
 const AppHeader = styled.div`
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,25 +45,26 @@ const Home: React.FC = () => {
       dispatch.app.updateNameAsync('redux');
     });
     return () => clearTimeout(id);
-  });
+  }, [dispatch.app]);
   return (
     <>
-      <GlobalStyle />
-      <AppWrapper>
-        <AppHeader>
-          <Logo />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <Link
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn {name}
-          </Link>
-        </AppHeader>
-      </AppWrapper>
+      <Layout>
+        <AppWrapper>
+          <AppHeader>
+            <Logo />
+            <p>
+              Edit <code>src/App.tsx</code> and save to reload.
+            </p>
+            <Link
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn {name}
+            </Link>
+          </AppHeader>
+        </AppWrapper>
+      </Layout>
     </>
   );
 };
