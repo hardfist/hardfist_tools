@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import 'styled-components/macro';
-import { css } from 'styled-components';
-import types from 'styled-components/cssprop';
 import React from 'react';
 import { Header } from 'components/header';
 
