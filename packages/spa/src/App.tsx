@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as type from 'styled-components/cssprop'; // eslint-disable-line
-import routes from 'routes';
+import { routes } from 'routes';
 import { Route } from 'react-router-dom';
 import { ThemeContext, Theme } from 'context/theme';
 import { GlobalStyle } from 'global';

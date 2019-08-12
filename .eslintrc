@@ -1,18 +1,27 @@
 {
-  "extends": ["react-app"],
-  "rules": {
-    "no-console": 2,
-    "jsx-a11y/alt-text": "off",
-    "no-unexpected-multiline": "off"
-  },
-  "overrides": [
-    {
-      "files": ["**/*.ts?(x)"],
-      "rules": {
-        "no-console": 2,
-        "jsx-a11y/alt-text": "off",
-        "no-unexpected-multiline": "off"
+    "extends": [
+      "react-app"
+    ],
+    "plugins": [
+      "import"
+    ],
+    "rules": {
+      "no-console": "error",
+      "jsx-a11y/alt-text": "off",
+      "no-unexpected-multiline": "off",
+      "import/no-default-export": "error"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "no-console": 2,
+          "jsx-a11y/alt-text": "off",
+          "no-unexpected-multiline": "off",
+          "import/no-default-export": "error"
+        }
       }
-    }
-  ]
-}
+    ]
+  }

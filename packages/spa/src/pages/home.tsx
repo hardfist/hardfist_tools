@@ -35,7 +35,7 @@ const Link = styled.a`
   color: #61dafb;
 `;
 
-const Home: React.FC = () => {
+export const Home: React.FC = () => {
   const { name } = useSelector((state: RootState) => {
     return { ...state.app };
   });
@@ -68,5 +68,3 @@ const Home: React.FC = () => {
     </>
   );
 };
-
-export default Home;
