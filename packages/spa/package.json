@@ -25,6 +25,7 @@
     "@types/styled-components": "^4.1.18",
     "@types/typography": "^0.16.2",
     "babel-plugin-macros": "^2.6.1",
+    "eslint-plugin-import": "^2.18.2",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -32,6 +33,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.1.0",
+    "react-spring": "^8.0.27",
     "redux": "^4.0.4",
     "styled-components": "^4.3.2",
     "typescript": "3.5.2",
@@ -44,7 +46,6 @@
     "eject": "react-scripts eject",
     "prepare": "yarn build"
   },
- 
   "browserslist": {
     "production": [
       ">0.2%",

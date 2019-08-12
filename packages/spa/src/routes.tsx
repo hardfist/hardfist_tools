@@ -1,8 +1,9 @@
 import React from 'react';
-export default [
+import { wrapDefault } from 'utils/export';
+export const routes = [
   {
     path: '/',
     exact: true,
-    component: React.lazy(() => import('./pages/home'))
+    component: React.lazy(wrapDefault(() => import('pages/home'), 'Home'))
   }
 ];

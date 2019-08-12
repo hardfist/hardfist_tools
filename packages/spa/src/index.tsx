@@ -5,7 +5,7 @@ import { App } from './App';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import * as serviceWorker from './serviceWorker';
-import typography from 'utils/typography';
+import { typography } from 'utils/typography';
 typography.injectStyles();
 
 ReactDOM.render(
