@@ -31,7 +31,7 @@
     "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.1.0",
     "redux": "^4.0.4",
     "styled-components": "^4.3.2",
     "typescript": "3.5.2",
@@ -39,14 +39,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "prepare": "yarn build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
+ 
   "browserslist": {
     "production": [
       ">0.2%",

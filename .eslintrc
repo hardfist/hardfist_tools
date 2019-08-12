@@ -1,8 +1,18 @@
 {
-  "extends": "react-app",
+  "extends": ["react-app"],
   "rules": {
     "no-console": 2,
     "jsx-a11y/alt-text": "off",
     "no-unexpected-multiline": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "no-console": 2,
+        "jsx-a11y/alt-text": "off",
+        "no-unexpected-multiline": "off"
+      }
+    }
+  ]
 }
