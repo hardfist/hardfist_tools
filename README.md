@@ -11,7 +11,7 @@
 ```
 $ npm install -g yarn // 安装yarn
 $ yarn bootstrap // 安装依赖
-$ cd packages/{具体模块} && yarn start // 进入模块启动
+$ yarn workspace @hardfist/spa start // 启动子模块
 ```
 ## 文档
 | 模块 | 版本 | 文档| 线上地址
