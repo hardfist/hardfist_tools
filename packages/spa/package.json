@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@hardfist/helpers": "^1.0.4",
+    "@loadable/component": "^5.10.2",
     "@rematch/core": "^1.1.0",
     "@rematch/immer": "^1.1.0",
     "@types/jest": "24.0.15",

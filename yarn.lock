@@ -771,7 +771,7 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@7.5.5", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0":
+"@babel/runtime@7.5.5", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3", "@babel/runtime@^7.4.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0":
   version "7.5.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -1998,6 +1998,14 @@
   dependencies:
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
+
+"@loadable/component@^5.10.2":
+  version "5.10.2"
+  resolved "https://registry.npm.taobao.org/@loadable/component/download/@loadable/component-5.10.2.tgz#1f51e7a0064cc0f59604b1933bbc7a1bbfd84d18"
+  integrity sha1-H1HnoAZMwPWWBLGTO7x6G7/YTRg=
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    hoist-non-react-statics "^3.3.0"
 
 "@marionebl/sander@^0.6.0":
   version "0.6.1"
