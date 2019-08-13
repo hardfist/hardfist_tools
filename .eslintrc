@@ -6,7 +6,7 @@
       "import"
     ],
     "rules": {
-      "no-console": "error",
+      "no-console": "warn",
       "jsx-a11y/alt-text": "off",
       "no-unexpected-multiline": "off",
       "import/no-default-export": "error"
@@ -17,7 +17,7 @@
           "**/*.ts?(x)"
         ],
         "rules": {
-          "no-console": 2,
+          "no-console": "warn",
           "jsx-a11y/alt-text": "off",
           "no-unexpected-multiline": "off",
           "import/no-default-export": "error"
