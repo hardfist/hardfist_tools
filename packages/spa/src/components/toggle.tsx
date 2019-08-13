@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import 'styled-components/macro';
 
 import styled, { css } from 'styled-components';
-import { ThemeContext } from 'context/theme';
+import { ThemeModeContext } from 'context/theme_mode';
 import MoonIcon from 'assets/moon.png';
 import SunIcon from 'assets/sun.png';
 const ToggleWrapper = styled.div`
@@ -53,7 +53,7 @@ const ToggleThumb = styled.div<{
   transform: ${p => (!p.checked ? 'translateX(0)' : 'translateX(26px)')};
 `;
 export const Toggle = (props: spa.util.withClassName) => {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const { themeMode, setThemeMode } = useContext(ThemeModeContext);
   return (
     <ToggleWrapper className={props.className}>
       <IconWrapper>
@@ -68,9 +68,9 @@ export const Toggle = (props: spa.util.withClassName) => {
         <Sun />
       </IconWrapper>
       <ToggleThumb
-        checked={theme === 'dark'}
+        checked={themeMode === 'dark'}
         onClick={() => {
-          setTheme(theme === 'dark' ? 'light' : 'dark');
+          setThemeMode(themeMode === 'dark' ? 'light' : 'dark');
         }}
       />
     </ToggleWrapper>
