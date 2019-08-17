@@ -1,17 +1,29 @@
 import { init } from '@rematch/core';
 import immerPlugin from '@rematch/immer';
-import { RematchRootDispatch, RematchRootState } from './models/util';
+import selectPlugin from '@rematch/select';
+import {
+  RematchRootDispatch,
+  RematchRootState,
+  RematchRootSelect
+} from './models/util';
 import * as models from 'models';
-const immer = immerPlugin();
 export const store: Store = init({
   models,
-  plugins: [immer]
+  plugins: [immerPlugin(), selectPlugin()]
 });
+const { select } = store;
+
+export { select };
 
 export type RootState = RematchRootState<typeof models>;
 
 export type RootDispatch = RematchRootDispatch<typeof models>;
+export type RootSelect = RematchRootSelect<typeof models>;
+
 export type Store = {
+  select: <T>(
+    calback: (select: RootSelect) => T
+  ) => (rootState: RootState) => T;
   name: string;
   dispatch: RootDispatch;
   getState(): RootState;
