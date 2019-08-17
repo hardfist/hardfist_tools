@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.6.0...@hardfist/spa@0.7.0) (2019-08-17)
+
+
+### Features
+
+* move typings to package ([4bf9d27](https://github.com/hardfist/hardfist_tools/commit/4bf9d27))
+* remove prepare ([734c681](https://github.com/hardfist/hardfist_tools/commit/734c681))
+
+
+
+
+
 # [0.6.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.5.1...@hardfist/spa@0.6.0) (2019-08-17)
 
 
