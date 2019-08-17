@@ -3,6 +3,7 @@ import { useDispatch, useSelector, useStore } from 'react-redux';
 import { RootDispatch, RootState, select, RootSelect } from 'store';
 import styled, { keyframes } from 'styled-components';
 import { Layout } from 'components/layout';
+import { get_todo_list } from 'service/app';
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 import { useState } from 'react';
 const AppWrapper = styled.div`
@@ -50,8 +51,11 @@ export const Home: React.FC = () => {
     return { ...state.app, ...selection(state) };
   });
   const {
-    app: { addTodo, setFilter, toggleTodo }
+    app: { addTodo, setFilter, toggleTodo, fetchTodo }
   } = useDispatch() as RootDispatch;
+  useEffect(() => {
+    fetchTodo();
+  }, [fetchTodo]);
   return (
     <>
       <Layout>

@@ -2,16 +2,16 @@ type ModelReducers<S = any> = {
   [key: string]: (state: S, payload: any) => S;
 };
 type ModelEffects<RootState = any> = {
-  [key: string]: (payload: any, rootState: RootState) => Promise<void>;
+  [key: string]: (payload?: any, rootState?: RootState) => Promise<any>;
 };
 type ModelSelect<RootState = any> = {
   [key: string]: () => (rootState: RootState) => any;
 };
-export type ModelConfig<S = any> = {
+export type ModelConfig<S = any, RS = any> = {
   state: S;
   reducers: ModelReducers<S>;
-  effects: (dispatch: any) => ModelEffects<any>;
-  selectors: (slice: any) => ModelSelect<any>;
+  effects: (dispatch: any) => ModelEffects<RS>;
+  selectors: (slice: any) => ModelSelect<RS>;
 };
 export type Models<M = any> = {
   [key: string]: ModelConfig<M>;
@@ -39,12 +39,11 @@ type Reducer2connect<R extends Function> = R extends (
   ? (...payload: P) => S
   : () => void;
 
-type Effect2connect<E extends Function> = E extends (
-  payload: infer P,
-  ...args: any
-) => any
-  ? (payload: P) => Promise<void>
-  : () => Promise<void>;
+type Effect2connect<E extends Function> = E extends () => infer S
+  ? () => Promise<S>
+  : E extends (payload: infer P, ...args: any[]) => infer S
+  ? (payload: P) => Promise<S>
+  : () => Promise<any>;
 
 // type ReducerFromModel<R extends Function> = R extends (state: infer S, payload: infer P) => infer S ? S : 'no';
 export type RematchRootDispatch<M extends Models> = {
