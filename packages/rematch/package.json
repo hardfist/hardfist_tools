@@ -11,6 +11,10 @@
     "access": "public",
     "registry": "https://registry.npmjs.com/"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
