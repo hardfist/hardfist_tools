@@ -28,8 +28,7 @@
     "test": "echo success",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "tsc",
-    "prepare": "yarn build && yarn build-storybook"
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/hardfist/hardfist_boilerplate/issues"
@@ -54,5 +53,5 @@
   "dependencies": {
     "styled-components": "^4.3.2"
   },
-  "gitHead": "f475c4fb84509ecfb140f57aff0afc9cff85a248"
+  "gitHead": "f235471ed854a2cf01a3ff4887c1d462ba2ecc9c"
 }

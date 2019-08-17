@@ -51,8 +51,7 @@
     "build": "CI=false react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
-    "analyze": "source-map-explorer build/static/js/main.*",
-    "prepare": "yarn build"
+    "analyze": "source-map-explorer build/static/js/main.*"
   },
   "browserslist": {
     "production": [
@@ -70,5 +69,5 @@
     "access": "public",
     "registry": "https://registry.npmjs.com/"
   },
-  "gitHead": "f475c4fb84509ecfb140f57aff0afc9cff85a248"
+  "gitHead": "f235471ed854a2cf01a3ff4887c1d462ba2ecc9c"
 }

@@ -11,5 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "json-server": "^0.15.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
+  },
+  "gitHead": "f235471ed854a2cf01a3ff4887c1d462ba2ecc9c"
 }
