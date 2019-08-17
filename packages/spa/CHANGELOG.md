@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.5.1...@hardfist/spa@0.6.0) (2019-08-17)
+
+
+### Bug Fixes
+
+* 自定义eslint配置 ([af9467d](https://github.com/hardfist/hardfist_tools/commit/af9467d))
+
+
+### Features
+
+* **spa:** add analyze ([436022a](https://github.com/hardfist/hardfist_tools/commit/436022a))
+* **spa:** add selector ([aa1c68c](https://github.com/hardfist/hardfist_tools/commit/aa1c68c))
+* **spa:** add theme support ([55e6125](https://github.com/hardfist/hardfist_tools/commit/55e6125))
+* **spa:** add todolist ([eaf5fea](https://github.com/hardfist/hardfist_tools/commit/eaf5fea))
+* **spa:** add toggle&& typography ([0642ab4](https://github.com/hardfist/hardfist_tools/commit/0642ab4))
+* **spa:** 动态导入使用@loadable/component ([f07c3c4](https://github.com/hardfist/hardfist_tools/commit/f07c3c4))
+* **spa:** 升级react版本 ([2537bbe](https://github.com/hardfist/hardfist_tools/commit/2537bbe))
+* **spa:** 升级styled-componets到v5 ([bbc3f8f](https://github.com/hardfist/hardfist_tools/commit/bbc3f8f))
+* **spa:** 支持主题切换 ([9c78f70](https://github.com/hardfist/hardfist_tools/commit/9c78f70))
+* **spa:** 添加router ([6763f06](https://github.com/hardfist/hardfist_tools/commit/6763f06))
+* **spa:** 添加远程拉取数据 ([648c366](https://github.com/hardfist/hardfist_tools/commit/648c366))
+* **spa:** 禁用default export ([3442e22](https://github.com/hardfist/hardfist_tools/commit/3442e22))
+
+
+
+
+
 ## [0.5.1](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.5.0...@hardfist/spa@0.5.1) (2019-08-10)
 
 
