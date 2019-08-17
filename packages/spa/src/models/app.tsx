@@ -1,4 +1,4 @@
-import { RootDispatch } from 'store';
+import { RootDispatch, RootState } from 'store';
 import { delay } from 'utils';
 
 const initialState = {
@@ -17,6 +17,18 @@ export const app = {
     async updateNameAsync(name: string) {
       await delay(1000);
       await dispatch.app.updateName(name);
+    }
+  }),
+  selectors: (slice: any) => ({
+    total() {
+      return (state: RootState) => {
+        return 'hello ';
+      };
+    },
+    test() {
+      return (state: RootState) => {
+        return 1;
+      };
     }
   })
 };

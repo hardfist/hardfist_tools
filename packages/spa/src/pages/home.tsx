@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootDispatch, RootState } from 'store';
+import { useDispatch, useSelector, useStore } from 'react-redux';
+import { RootDispatch, RootState, select, RootSelect } from 'store';
 import styled, { keyframes } from 'styled-components';
 import { Layout } from 'components/layout';
-
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 const AppWrapper = styled.div`
   text-align: center;
@@ -34,10 +33,14 @@ const Logo = styled(LogoIcon)`
 const Link = styled.a`
   color: #61dafb;
 `;
-
+const selection = select((model: RootSelect) => {
+  return {
+    total: model.app.total
+  };
+});
 export const Home: React.FC = () => {
-  const { name } = useSelector((state: RootState) => {
-    return { ...state.app };
+  const { name, total } = useSelector((state: RootState) => {
+    return { ...state.app, ...selection(state) };
   });
   const dispatch = useDispatch() as RootDispatch;
   useEffect(() => {
@@ -46,6 +49,7 @@ export const Home: React.FC = () => {
     });
     return () => clearTimeout(id);
   }, [dispatch.app]);
+
   return (
     <>
       <Layout>
@@ -60,7 +64,7 @@ export const Home: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Learn {name}
+              Learn {name} : {total}
             </Link>
           </AppHeader>
         </AppWrapper>
