@@ -1,33 +1,56 @@
 import { RootDispatch, RootState } from 'store';
 import { delay } from 'utils';
+let nextTodoId = 0;
+type FILTER_TYPE = 'SHOW_ALL' | 'SHOW_COMPLETED' | 'SHOW_ACTIVE';
 
 const initialState = {
-  name: 'react'
+  todo_list: [
+    {
+      id: nextTodoId++,
+      text: 'react is good',
+      completed: true
+    }
+  ],
+  filter: 'SHOW_ALL' as FILTER_TYPE
 };
 export type appState = typeof initialState;
 
 export const app = {
   state: initialState,
   reducers: {
-    updateName(state: appState, name: string) {
-      state.name = name;
+    addTodo(state: appState, text: string) {
+      state.todo_list.push({
+        id: nextTodoId++,
+        text,
+        completed: false
+      });
+    },
+    setFilter(state: appState, filter: FILTER_TYPE) {
+      state.filter = filter;
+    },
+    toggleTodo(state: appState, id: number) {
+      const item = state.todo_list.filter(x => x.id === id)[0];
+      item.completed = !item.completed;
     }
   },
   effects: (dispatch: RootDispatch) => ({
-    async updateNameAsync(name: string) {
+    async addTodoAsync(text: string) {
       await delay(1000);
-      await dispatch.app.updateName(name);
+      await dispatch.app.addTodo(text);
     }
   }),
-  selectors: (slice: any) => ({
-    total() {
-      return (state: RootState) => {
-        return 'hello ';
-      };
-    },
-    test() {
-      return (state: RootState) => {
-        return 1;
+  selectors: () => ({
+    visible_todo() {
+      return ({ app: { filter, todo_list } }: RootState) => {
+        return todo_list.filter(x => {
+          if (filter === 'SHOW_ALL') {
+            return true;
+          } else if (filter === 'SHOW_COMPLETED') {
+            return x.completed;
+          } else {
+            return !x.completed;
+          }
+        });
       };
     }
   })
