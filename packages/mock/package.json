@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo success",
     "start": "json-server --watch db.json --port=3004"
   },
   "keywords": [],
