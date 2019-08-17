@@ -5,7 +5,7 @@ import {
   RematchRootDispatch,
   RematchRootState,
   RematchRootSelect
-} from './models/util';
+} from '@hardfist/rematch';
 import * as models from 'models';
 export const store: Store = init({
   models,
