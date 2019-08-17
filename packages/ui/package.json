@@ -1,6 +1,6 @@
 {
   "name": "@hardfist/ui",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "ui组件库",
   "author": "hardfist <1562502418@qq.com>",
   "homepage": "https://github.com/hardfist/hardfist_boilerplate#readme",
@@ -53,5 +53,5 @@
   "dependencies": {
     "styled-components": "^4.3.2"
   },
-  "gitHead": "f235471ed854a2cf01a3ff4887c1d462ba2ecc9c"
+  "gitHead": "bb755af6f2fb042e7e87e47e7a82b2a302ba3bbc"
 }
