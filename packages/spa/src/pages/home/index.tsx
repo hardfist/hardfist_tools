@@ -3,7 +3,6 @@ import { useDispatch, useSelector, useStore } from 'react-redux';
 import { RootDispatch, RootState, select, RootSelect } from 'store';
 import styled, { keyframes } from 'styled-components';
 import { Layout } from 'components/layout';
-import { get_todo_list } from 'service/app';
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 import { useState } from 'react';
 const AppWrapper = styled.div`
@@ -41,6 +40,7 @@ const Item = styled.li<{ completed: boolean }>`
   text-decoration: ${p => (p.completed ? 'line-through' : 'none')};
 `;
 const selection = select((model: RootSelect) => ({ ...model.app }));
+
 export const Home: React.FC = () => {
   const [input, setInput] = useState('');
   const { visible_todo, filter } = useSelector((state: RootState) => {
