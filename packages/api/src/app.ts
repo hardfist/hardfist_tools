@@ -1,12 +1,14 @@
 import fastify from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
-import console = require('console');
+import { routes } from './routes';
 
 const server: fastify.FastifyInstance<
   Server,
   IncomingMessage,
   ServerResponse
-> = fastify({});
+> = fastify({
+  logger: true
+});
 const opts: fastify.RouteShorthandOptions = {
   schema: {
     response: {
@@ -21,15 +23,15 @@ const opts: fastify.RouteShorthandOptions = {
     }
   }
 };
+server.register(routes);
 
-server.get('/ping', opts, (request, resp) => {
-  resp.code(200).send({
-    pong: 'it worked'
-  });
-});
-server.listen(3000, err => {
-  if (err) {
-    throw err;
+const start = async () => {
+  try {
+    await server.listen(3000);
+    console.log('listen at http://localhost:3000');
+  } catch (err) {
+    server.log.error(err);
+    process.exit(1);
   }
-  console.log(`server listening on http://localhost:3000`);
-});
+};
+start();

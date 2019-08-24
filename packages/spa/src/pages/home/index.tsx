@@ -40,11 +40,7 @@ const Item = styled.li<{ completed: boolean }>`
   color: rgba(0, 0, 0, 0.8);
   text-decoration: ${p => (p.completed ? 'line-through' : 'none')};
 `;
-const selection = select((model: RootSelect) => {
-  return {
-    visible_todo: model.app.visible_todo
-  };
-});
+const selection = select((model: RootSelect) => ({ ...model.app }));
 export const Home: React.FC = () => {
   const [input, setInput] = useState('');
   const { visible_todo, filter } = useSelector((state: RootState) => {
