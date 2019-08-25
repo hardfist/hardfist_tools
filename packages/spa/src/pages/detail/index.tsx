@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 import { useImmerReducer } from 'use-immer';
+import { Layout } from 'components/layout';
 
 export const Detail = () => {
   const [state, dispatch] = useImmerReducer(
@@ -19,15 +20,17 @@ export const Detail = () => {
   );
   const props = useSpring({ opacity: 1, from: { opacity: 0 } });
   return (
-    <animated.div
-      style={props}
-      onClick={() => {
-        dispatch({
-          type: 'incr'
-        });
-      }}
-    >
-      I will fade in:{state.count}
-    </animated.div>
+    <Layout>
+      <animated.div
+        style={props}
+        onClick={() => {
+          dispatch({
+            type: 'incr'
+          });
+        }}
+      >
+        I will fade in:{state.count}
+      </animated.div>
+    </Layout>
   );
 };

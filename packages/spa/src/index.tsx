@@ -9,11 +9,9 @@ import { typography } from 'utils/typography';
 typography.injectStyles();
 
 ReactDOM.render(
-  <Provider store={store as any}>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </Provider>,
+  <HashRouter>
+    <App />
+  </HashRouter>,
   document.getElementById('root')
 );
 
