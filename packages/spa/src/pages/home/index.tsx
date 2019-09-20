@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import { useDispatch, useSelector, useStore } from 'react-redux';
-import { RootDispatch, RootState, select, RootSelect } from 'store';
+import React, { useEffect } from 'react';
+import { useStoreState, useStoreActions } from 'store';
 import styled, { keyframes } from 'styled-components';
 import { Layout } from 'components/layout';
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
@@ -39,16 +38,21 @@ const Item = styled.li<{ completed: boolean }>`
   color: rgba(0, 0, 0, 0.8);
   text-decoration: ${p => (p.completed ? 'line-through' : 'none')};
 `;
-const selection = select((model: RootSelect) => ({ ...model.app }));
 
 export const Home: React.FC = () => {
   const [input, setInput] = useState('');
-  const { visible_todo, filter } = useSelector((state: RootState) => {
-    return { ...state.app, ...selection(state) };
+  const { visible_todo, filter } = useStoreState(state => {
+    return {
+      ...state.todo
+    };
   });
-  const {
-    app: { addTodo, setFilter, toggleTodo, fetchTodo }
-  } = useDispatch() as RootDispatch;
+  const { addTodo, setFilter, toggleTodo, fetchTodo } = useStoreActions(
+    actions => {
+      return {
+        ...actions.todo
+      };
+    }
+  );
   useEffect(() => {
     fetchTodo();
   }, [fetchTodo]);

@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { App } from './App';
-import { Provider } from 'react-redux';
-import { store } from './store';
+import { StoreProvider } from 'easy-peasy';
 import * as serviceWorker from './serviceWorker';
 import { typography } from 'utils/typography';
+import { store } from 'store';
 typography.injectStyles();
-
 ReactDOM.render(
-  <Provider store={store as any}>
+  <StoreProvider store={store}>
     <HashRouter>
       <App />
     </HashRouter>
-  </Provider>,
+  </StoreProvider>,
   document.getElementById('root')
 );
 
