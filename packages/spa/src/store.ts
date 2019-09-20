@@ -1,30 +1,17 @@
-import { init } from '@rematch/core';
-import immerPlugin from '@rematch/immer';
-import selectPlugin from '@rematch/select';
-import {
-  RematchRootDispatch,
-  RematchRootState,
-  RematchRootSelect
-} from '@hardfist/rematch';
+import { createStore, createTypedHooks } from 'easy-peasy';
+import { get_todo_list } from 'service/app';
 import * as models from 'models';
-export const store: Store = init({
-  models,
-  plugins: [immerPlugin(), selectPlugin()]
+export interface Injections {
+  get_todo_list: typeof get_todo_list;
+}
+export const store = createStore(models, {
+  injections: {
+    get_todo_list
+  }
 });
-const { select } = store;
 
-export { select };
+const typedHooks = createTypedHooks<typeof models>();
 
-export type RootState = RematchRootState<typeof models>;
-
-export type RootDispatch = RematchRootDispatch<typeof models>;
-export type RootSelect = RematchRootSelect<typeof models>;
-
-export type Store = {
-  select: <T>(
-    calback: (select: RootSelect) => T
-  ) => (rootState: RootState) => T;
-  name: string;
-  dispatch: RootDispatch;
-  getState(): RootState;
-};
+export const useStoreActions = typedHooks.useStoreActions;
+export const useStoreDispatch = typedHooks.useStoreDispatch;
+export const useStoreState = typedHooks.useStoreState;
