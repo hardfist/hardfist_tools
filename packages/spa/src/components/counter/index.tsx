@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Layout } from 'components/layout';
-import { counter } from './model';
-import { createComponentStore } from 'easy-peasy';
-const useCounter = createComponentStore(counter);
+import {
+  useReduxCounter,
+  useLocalCounter,
+  useContextCounter,
+  CounterActions,
+  CounterState
+} from './hooks';
 const Row = styled.div``;
-export const Counter = () => {
-  const [state, actions] = useCounter();
+const renderCounter = (state: CounterState, actions: CounterActions) => {
   return (
     <Layout>
       <Row
@@ -28,4 +31,17 @@ export const Counter = () => {
       </Row>
     </Layout>
   );
+};
+export const ContextCounter = () => {
+  const [state, actions] = useContextCounter();
+  return renderCounter(state, actions);
+};
+export const LocalCounter = () => {
+  const [state, actions] = useLocalCounter();
+  return renderCounter(state, actions);
+};
+export const ReduxCounter = () => {
+  const [state, actions] = useReduxCounter();
+  console.log('state,', state, actions);
+  return renderCounter(state, actions);
 };
