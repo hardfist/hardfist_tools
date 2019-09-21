@@ -9,6 +9,7 @@ export const store = createStore(models, {
     get_todo_list
   }
 });
+console.log('state:', store.getState().counter);
 
 const typedHooks = createTypedHooks<typeof models>();
 
