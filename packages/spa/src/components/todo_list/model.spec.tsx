@@ -1,4 +1,4 @@
-import { todo } from './todo';
+import { todo } from './model';
 import { createStore } from 'easy-peasy';
 describe('test todo model', () => {
   it('test addToo', () => {

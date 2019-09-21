@@ -12,7 +12,6 @@ export const Local = () => {
           <LocalCounter />
         </div>
       </CounterContext.Provider>
-      <ReduxCounter />
     </>
   );
 };

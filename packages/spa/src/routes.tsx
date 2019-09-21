@@ -1,16 +1,22 @@
 import loadable from '@loadable/component';
 import { wrapDefault } from 'utils/export';
-const Local = loadable(wrapDefault(() => import('pages/counter'), 'Local'));
-const Home = loadable(wrapDefault(() => import('pages/home'), 'Home'));
+
 export const routes = [
   {
-    path: '/',
+    path: '/redux',
     exact: true,
-    component: Home
+    component: loadable(wrapDefault(() => import('pages/redux'), 'Redux'))
   },
   {
     path: '/local',
     exact: true,
-    component: Local
+    component: loadable(wrapDefault(() => import('pages/counter'), 'Local'))
+  },
+  {
+    path: '/todo_list',
+    exact: true,
+    component: loadable(
+      wrapDefault(() => import('pages/todo_list'), 'TodoList')
+    )
   }
 ];

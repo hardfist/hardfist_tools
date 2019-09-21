@@ -39,7 +39,7 @@ const Item = styled.li<{ completed: boolean }>`
   text-decoration: ${p => (p.completed ? 'line-through' : 'none')};
 `;
 
-export const Home: React.FC = () => {
+export const TodoList: React.FC = () => {
   const [input, setInput] = useState('');
   const { visible_todo, filter } = useStoreState(state => {
     return {
