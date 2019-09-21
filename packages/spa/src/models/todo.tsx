@@ -32,7 +32,7 @@ export const todo: TodosModel = {
   ],
   filter: 'SHOW_ALL' as FILTER_TYPE,
   init: action((state, init) => {
-    state.todo_list.push(...init);
+    state.todo_list = init;
   }),
   addTodo: action((state, text) => {
     state.todo_list.push({
