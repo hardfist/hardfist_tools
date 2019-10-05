@@ -1,10 +1,10 @@
-import { App } from 'components/App';
-import { Login } from 'components/Login';
-import { Register } from 'components/Register';
+import { Home } from 'pages/Home';
+import { Login } from 'pages/Login';
+import { Register } from 'pages/Register';
 export const routes = [
   {
     path: '/',
-    component: App
+    component: Home
   },
   {
     path: '/login',

@@ -1,15 +1,20 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import { Login } from 'pages/Login';
+import { Register } from 'pages/Register';
+import { Home } from 'pages/Home';
 import { StoreProvider } from 'easy-peasy';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { store } from 'store';
-import { routes } from 'routes';
+import { Layout } from 'components/Layout';
 ReactDOM.render(
   <StoreProvider store={store}>
     <BrowserRouter>
-      {routes.map(x => (
-        <Route path={x.path} component={x.component} key={x.path} />
-      ))}
+      <Layout>
+        <Route path="/" component={Home} />
+        <Route path="/login" compnoent={Login} />
+        <Route path="/register" component={Register} />
+      </Layout>
     </BrowserRouter>
   </StoreProvider>,
   document.getElementById('root')
