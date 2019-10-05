@@ -1,10 +1,50 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ListErrors } from 'components/ListErrors';
+import {
+  action,
+  actionOn,
+  ActionOn,
+  Action,
+  Computed,
+  computed
+} from 'easy-peasy';
 import { useStoreActions, useStoreState } from 'store';
+import { useLocalStore } from 'utils/model';
+export interface Model {
+  email: string;
+  password: string;
+  set_email: Action<Model, string>;
+  set_password: Action<Model, string>;
+  double_email: Computed<Model, string>;
+  on_change_email: ActionOn<Model>;
+}
+export const model: Model = {
+  email: '',
+  password: '',
+  double_email: computed(state => {
+    return state.email + state.email;
+  }),
+  set_email: action((state, email) => {
+    state.email = email;
+  }),
+  set_password: action((state, password) => {
+    state.password = password;
+  }),
+  on_change_email: actionOn(
+    actions => actions.set_email,
+    (state, target) => {
+      console.log('email', target.payload);
+    }
+  )
+};
+
 export const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [
+    { email, double_email, password },
+    { set_email, set_password }
+  ] = useLocalStore(model);
+  console.log('x:', double_email);
   const { errors, inProgress } = useStoreState(x => x.auth);
   const { login } = useStoreActions(x => x.auth);
   return (
@@ -35,7 +75,7 @@ export const Login = () => {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={e => set_email(e.target.value)}
                   />
                 </fieldset>
 
@@ -45,7 +85,7 @@ export const Login = () => {
                     type="password"
                     placeholder="Password"
                     value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    onChange={e => set_password(e.target.value)}
                   />
                 </fieldset>
 
