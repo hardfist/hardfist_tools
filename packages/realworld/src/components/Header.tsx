@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { APP_NAME } from 'utils/lib';
 
 const LoggedOutView = (props: {
   currentUser?: com.hardfist.realworld.User;
@@ -70,14 +71,13 @@ const LoggedInView = (props: { currentUser?: com.hardfist.realworld.User }) => {
 };
 
 export const Header = (props: {
-  appName: string;
   currentUser?: com.hardfist.realworld.User;
 }) => {
   return (
     <nav className="navbar navbar-light">
       <div className="container">
         <Link to="/" className="navbar-brand">
-          {props.appName.toLowerCase()}
+          {APP_NAME.toLowerCase()}
         </Link>
 
         <LoggedOutView currentUser={props.currentUser} />

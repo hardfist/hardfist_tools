@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ListErrors } from 'components/ListErrors';
 import { Link } from 'react-router-dom';
 import { useStoreActions, useStoreState } from 'store';
 
 export const Register = () => {
-  const { errors, password, email, username, inProgress } = useStoreState(
-    x => x.auth
-  );
-  const {
-    submitForm,
-    change_username,
-    change_email,
-    change_password
-  } = useStoreActions(({ auth }) => {
+  const [email, change_email] = useState('');
+  const [username, change_username] = useState('');
+  const [password, change_password] = useState('');
+  const { errors, inProgress } = useStoreState(x => x.auth);
+  const { submitForm } = useStoreActions(({ auth }) => {
     return {
       submitForm: (username: string, email: string, password: string) => async (
         ev: React.FormEvent

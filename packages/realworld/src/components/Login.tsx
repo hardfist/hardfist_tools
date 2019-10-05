@@ -1,35 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ListErrors } from 'components/ListErrors';
 import { useStoreActions, useStoreState } from 'store';
 import * as Auth from 'service/auth';
 export const Login = () => {
-  const { errors, email, password, inProgress } = useStoreState(x => x.auth);
-  const { submit_form, change_email, change_password } = useStoreActions(
-    ({ auth }) => {
-      return {
-        submit_form: (email: string, password: string) => async (
-          e: React.FormEvent
-        ) => {
-          e.preventDefault();
-          await auth.login({
-            email,
-            password
-          });
-        },
-        change_email: (email: string) => {
-          auth.update_field_auth({
-            email
-          });
-        },
-        change_password: (password: string) => {
-          auth.update_field_auth({
-            password
-          });
-        }
-      };
-    }
-  );
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { errors, inProgress } = useStoreState(x => x.auth);
+  const { login } = useStoreActions(x => x.auth);
   return (
     <div className="auth-page">
       <div className="container page">
@@ -42,7 +20,15 @@ export const Login = () => {
 
             <ListErrors errors={errors} />
 
-            <form onSubmit={submit_form(email, password)}>
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                login({
+                  email,
+                  password
+                });
+              }}
+            >
               <fieldset>
                 <fieldset className="form-group">
                   <input
@@ -50,7 +36,7 @@ export const Login = () => {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={e => change_email(e.target.value)}
+                    onChange={e => setEmail(e.target.value)}
                   />
                 </fieldset>
 
@@ -60,7 +46,7 @@ export const Login = () => {
                     type="password"
                     placeholder="Password"
                     value={password}
-                    onChange={e => change_password(e.target.value)}
+                    onChange={e => setPassword(e.target.value)}
                   />
                 </fieldset>
 
