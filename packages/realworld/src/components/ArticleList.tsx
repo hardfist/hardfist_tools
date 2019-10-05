@@ -2,15 +2,17 @@ import React, { useEffect } from 'react';
 import { ArticlePreview } from 'components/ArticlePreview';
 import { useStoreState, useStoreActions } from 'store';
 
-export default function ArticleList() {
+export default function ArticleList(props: {
+  selectedTab: com.hardfist.realworld.Tab;
+}) {
+  const { selectedTab } = props;
   const { isLoading, articles } = useStoreState(x => x.home);
   const { fetch_articles } = useStoreActions(x => x.home);
   useEffect(() => {
     fetch_articles({
-      type: 'feed',
-      filters: 'xx'
+      type: selectedTab.type
     });
-  }, [fetch_articles]);
+  }, [fetch_articles, selectedTab]);
   if (isLoading) {
     return <div className="article-preview">Loading...</div>;
   }

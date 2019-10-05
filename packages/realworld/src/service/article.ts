@@ -17,9 +17,22 @@ function omitSlug(article: {
 }) {
   return Object.assign({}, article, { slug: undefined });
 }
-
-export function getArticles(page: number) {
-  return API.get<Articles>(`/articles?${limit(10, page)}`);
+export function getAllArticles(page: number) {
+  return API.get<Articles>('/articles', {
+    params: {
+      limit: 10,
+      page
+    }
+  });
+}
+export function getArticles(type: string, params?: PlainObject) {
+  return API.get(type === 'FEED' ? '/articles/feed' : '/articles', {
+    params: {
+      limit: 10,
+      page: 1,
+      ...params
+    }
+  });
 }
 
 export function getArticlesByAuthor(username: string, page: number) {

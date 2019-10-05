@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function FavoriteButton({ article, dispatch, children }: any) {
-  const [loading, setLoading] = React.useState(false);
+  const [loading] = React.useState(false);
 
   const classNames = ['btn', 'btn-sm'];
 
