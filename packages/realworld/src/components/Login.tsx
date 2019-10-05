@@ -12,8 +12,10 @@ export const Login = () => {
           e: React.FormEvent
         ) => {
           e.preventDefault();
-          const resp = await Auth.login(email, password);
-          auth.login(resp);
+          await auth.login({
+            email,
+            password
+          });
         },
         change_email: (email: string) => {
           auth.update_field_auth({
