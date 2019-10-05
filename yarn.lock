@@ -6352,10 +6352,10 @@ easy-peasy@3.0.0:
     shallowequal "^1.1.0"
     ts-toolbelt "3.0.0-9"
 
-easy-peasy@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.npmjs.org/easy-peasy/-/easy-peasy-3.0.2.tgz#1bd9cd589cb6fd930528243b950e13d4f41958a5"
-  integrity sha512-qcsr81F6rZN5hEZ1lYRDUHtatxn5Qb4cF5uj5cNXKEXLXmATCxktNC53B2XvccA7K8zSCwUeoFckrCOvLeINWA==
+easy-peasy@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/easy-peasy/download/easy-peasy-3.1.0.tgz#b2989002e7c1e76353b10d5ba3cd5f0880f0d8c2"
+  integrity sha1-spiQAufB52NTsQ1bo81fCIDw2MI=
   dependencies:
     immer-peasy "3.1.3"
     memoizerific "^1.11.3"
@@ -6363,7 +6363,7 @@ easy-peasy@^3.0.2:
     redux "^4.0.4"
     redux-thunk "^2.3.0"
     shallowequal "^1.1.0"
-    ts-toolbelt "^3.8.0"
+    ts-toolbelt "^4.7.23"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
@@ -15741,10 +15741,10 @@ ts-toolbelt@3.0.0-9:
   resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-3.0.0-9.tgz#02d48d202d7eff6e08e0beab23b57aa2fb64c609"
   integrity sha512-nFEZWDn4TtgSP1J4dufzaNgXtkuVN5tFZiFPy6fD+At3rHsyjYcdbaM+x12n6GR0Pil1JgO6xIpWF4g8CkSlJw==
 
-ts-toolbelt@^3.8.0:
-  version "3.14.0"
-  resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-3.14.0.tgz#f4c4984cf4e988915a0175fd6a8ded00bd1d23b0"
-  integrity sha512-DYjD8tL7M1kBogRd9UKg3bUP5yh69WWcMSaA3By8ATiJU9fgYudSYIe8tWD5cpPkrGCdGGnKXQHG+5IrjJ5uhQ==
+ts-toolbelt@^4.7.23:
+  version "4.7.24"
+  resolved "https://registry.npm.taobao.org/ts-toolbelt/download/ts-toolbelt-4.7.24.tgz#9e150a552bed3618c385d0fb276127937f473ff2"
+  integrity sha1-nhUKVSvtNhjDhdD7J2Enk39HP/I=
 
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"

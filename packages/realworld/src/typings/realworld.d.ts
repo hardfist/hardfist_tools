@@ -34,6 +34,9 @@ declare namespace com.hardfist.realworld {
     bio: string;
     image: string;
   }
+  export interface Errors {
+    [key: stirng]: string[];
+  }
   // export interface BaseResponse<T = any> {
   //   code: number;
   //   message: string;

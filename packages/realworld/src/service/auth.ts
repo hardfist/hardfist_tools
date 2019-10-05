@@ -10,7 +10,7 @@ export function login({
   email: string;
   password: string;
 }) {
-  return agent.post<com.hardfist.realworld.User>('/users/login', {
+  return agent.post<{ user: com.hardfist.realworld.User }>('/users/login', {
     user: {
       email,
       password
@@ -26,7 +26,7 @@ export function register({
   email: string;
   password: string;
 }) {
-  return agent.post('/users', {
+  return agent.post<{ user: com.hardfist.realworld.User }>('/users', {
     user: {
       username,
       email,

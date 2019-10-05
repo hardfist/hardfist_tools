@@ -5,7 +5,7 @@ import { useUnmount } from 'react-use';
 import { setToken } from 'utils/agent';
 
 export const App: React.FC = props => {
-  const { appLoaded, appName, currentUser } = useStoreState(x => x.common);
+  const { isAuthenticated, currentUser } = useStoreState(x => x.auth);
 
   useUnmount(() => {
     const token = window.localStorage.getItem('jwd');
@@ -14,17 +14,17 @@ export const App: React.FC = props => {
     }
   });
   // render
-  if (appLoaded) {
+  if (isAuthenticated) {
     return (
       <div>
-        <Header appName={appName} currentUser={currentUser} />
+        <Header currentUser={currentUser} />
         {props.children}
       </div>
     );
   }
   return (
     <div>
-      <Header appName={appName} currentUser={currentUser} />
+      <Header currentUser={currentUser} />
     </div>
   );
 };
