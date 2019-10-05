@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { User } from 'model';
 
-const LoggedOutView = (props: { currentUser?: User }) => {
+const LoggedOutView = (props: {
+  currentUser?: com.hardfist.realworld.User;
+}) => {
   if (!props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
@@ -29,7 +30,7 @@ const LoggedOutView = (props: { currentUser?: User }) => {
   return null;
 };
 
-const LoggedInView = (props: { currentUser?: User }) => {
+const LoggedInView = (props: { currentUser?: com.hardfist.realworld.User }) => {
   if (props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
@@ -68,7 +69,10 @@ const LoggedInView = (props: { currentUser?: User }) => {
   return null;
 };
 
-export const Header = (props: { appName: string; currentUser?: User }) => {
+export const Header = (props: {
+  appName: string;
+  currentUser?: com.hardfist.realworld.User;
+}) => {
   return (
     <nav className="navbar navbar-light">
       <div className="container">

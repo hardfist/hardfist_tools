@@ -1,18 +1,31 @@
 import { agent } from 'utils/agent';
-import { User } from 'model';
 
 export function current() {
   return agent.get('/user');
 }
-export function login(email: string, password: string) {
-  return agent.post('/users/login', {
+export function login({
+  email,
+  password
+}: {
+  email: string;
+  password: string;
+}) {
+  return agent.post<com.hardfist.realworld.User>('/users/login', {
     user: {
       email,
       password
     }
   });
 }
-export function register(username: string, email: string, password: string) {
+export function register({
+  username,
+  email,
+  password
+}: {
+  username: string;
+  email: string;
+  password: string;
+}) {
   return agent.post('/users', {
     user: {
       username,
@@ -22,6 +35,6 @@ export function register(username: string, email: string, password: string) {
   });
 }
 
-export function save(user: User) {
+export function save(user: com.hardfist.realworld.User) {
   return agent.post('/user', { user });
 }
