@@ -1,4 +1,4 @@
-import { computed, Computed, action, Action, Thunk, thunk } from 'easy-peasy';
+import { action, Action, Thunk, thunk } from 'easy-peasy';
 import * as TagService from 'service/tags';
 import * as ArticleService from 'service/article';
 type Tag = com.hardfist.realworld.Tag;
@@ -21,7 +21,7 @@ export interface HomeModel {
     HomeModel,
     {
       type: string;
-      filters: string;
+      filters?: PlainObject;
     }
   >;
   fetch_tags: Thunk<HomeModel>;
@@ -42,12 +42,18 @@ export const home: HomeModel = {
     state.articlesCount = articlesCount;
     state.isLoading = false;
   }),
-  fetch_articles: thunk(async ({ fetch_start, fetch_end }) => {
-    fetch_start();
-    const {
-      data: { articles, articlesCount }
-    } = await ArticleService.getFeedArticles();
-  }),
+  fetch_articles: thunk(
+    async ({ fetch_start, fetch_end }, { type, filters }) => {
+      fetch_start();
+      const {
+        data: { articles, articlesCount }
+      } = await ArticleService.getArticles(type, filters);
+      fetch_end({
+        articles,
+        articlesCount
+      });
+    }
+  ),
   fetch_tags: thunk(async actions => {
     const {
       data: { tags }

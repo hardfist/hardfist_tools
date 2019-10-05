@@ -34,6 +34,13 @@ declare namespace com.hardfist.realworld {
     bio: string;
     image: string;
   }
+  export interface Tab {
+    type: string;
+    label: string;
+  }
+  export interface PlainObject {
+    [key: string]: any;
+  }
   export interface Errors {
     [key: stirng]: string[];
   }
