@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ListErrors } from 'components/ListErrors';
 import { useStoreActions, useStoreState } from 'store';
-import * as Auth from 'service/auth';
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
