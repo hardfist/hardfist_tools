@@ -9,7 +9,8 @@
       "no-console": "warn",
       "jsx-a11y/alt-text": "off",
       "no-unexpected-multiline": "off",
-      "import/no-default-export": "error"
+      "import/no-default-export": "error",
+      "@typescript-eslint/no-explicit-any": "warn"
     },
     "overrides": [
       {
@@ -20,7 +21,8 @@
           "no-console": "warn",
           "jsx-a11y/alt-text": "off",
           "no-unexpected-multiline": "off",
-          "import/no-default-export": "error"
+          "import/no-default-export": "error",
+          "@typescript-eslint/no-explicit-any": "warn"
         }
       }
     ]
