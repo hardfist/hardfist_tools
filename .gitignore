@@ -25,3 +25,5 @@ lerna-debug.log
 storybook-static
 .jest-cache
 coverage
+
+dist/
