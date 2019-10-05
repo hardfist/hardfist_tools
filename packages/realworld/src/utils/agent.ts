@@ -1,10 +1,15 @@
 import Axios from 'axios';
+import * as jwtService from 'service/jwt';
+import jwtDecode from 'jwt-decode';
 import { history } from './history';
 
 const API_ROOT = 'https://conduit.productionready.io/api';
-const TOKEN_KEY = 'Authorization';
 const agent = Axios.create({
   baseURL: API_ROOT
+});
+agent.interceptors.request.use(req => {
+  req.headers['Authorization'] = `Token ${jwtService.getToken()}`;
+  return req;
 });
 agent.interceptors.response.use(
   response => {
@@ -23,12 +28,20 @@ agent.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-const setToken = (token: string) => {
-  if (token) {
-    agent.defaults.headers.common[TOKEN_KEY] = `Token ${token}}`;
-  } else {
-    delete agent.defaults.headers.common[TOKEN_KEY];
-  }
+
+type JWTPayload = {
+  id: string;
+  username: string;
+  exp: number;
 };
-export function isTokenValid(token: string) {}
-export { agent, setToken };
+export function isTokenValid(token: string) {
+  try {
+    const decoded_jwt: JWTPayload = jwtDecode(token);
+    const current_time = Date.now().valueOf() / 1000;
+    return decoded_jwt.exp > current_time;
+  } catch (error) {
+    return false;
+  }
+}
+
+export { agent };

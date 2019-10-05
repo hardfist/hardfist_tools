@@ -1,6 +1,5 @@
 import React from 'react';
-// import ArticleList from '../ArticleList';
-// import TabList from '../common/TabList';
+import ArticleList from 'components/ArticleList';
 
 export default function MainView() {
   const tabsData: any[] = [
@@ -10,10 +9,8 @@ export default function MainView() {
 
   return (
     <div className="col-md-9">
-      {/* <div className="feed-toggle">
-        <TabList data={tabsData} />
-      </div>
-      <ArticleList /> */}
+      <div className="feed-toggle">{/* <TabList data={tabsData} /> */}</div>
+      <ArticleList />
     </div>
   );
 }

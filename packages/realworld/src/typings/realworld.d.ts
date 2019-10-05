@@ -10,7 +10,7 @@ declare namespace com.hardfist.realworld {
     title: string;
     description: string;
     body: string;
-    tagList: string;
+    tagList: string[];
     createdAt: Date;
     updatedAt: Date;
     favorited: boolean;
