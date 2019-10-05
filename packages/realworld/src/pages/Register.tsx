@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { ListErrors } from 'components/ListErrors';
 import { Link } from 'react-router-dom';
 import { useStoreActions, useStoreState } from 'store';
-
+import { useLocalStore } from 'utils/model';
+import { model as LoginModel } from 'pages/Login';
 export const Register = () => {
-  const [email, change_email] = useState('');
-  const [username, change_username] = useState('');
-  const [password, change_password] = useState('');
+  const [{ email, password }, { set_email, set_password }] = useLocalStore(
+    LoginModel
+  );
+  const [username, set_username] = useState('');
   const { errors, inProgress } = useStoreState(x => x.auth);
   const { submitForm } = useStoreActions(({ auth }) => {
     return {
@@ -39,7 +41,7 @@ export const Register = () => {
                     type="text"
                     placeholder="Username"
                     value={username}
-                    onChange={e => change_username(e.target.value)}
+                    onChange={e => set_username(e.target.value)}
                   />
                 </fieldset>
 
@@ -49,7 +51,7 @@ export const Register = () => {
                     type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={e => change_email(e.target.value)}
+                    onChange={e => set_email(e.target.value)}
                   />
                 </fieldset>
 
@@ -59,7 +61,7 @@ export const Register = () => {
                     type="password"
                     placeholder="Password"
                     value={password}
-                    onChange={e => change_password(e.target.value)}
+                    onChange={e => set_password(e.target.value)}
                   />
                 </fieldset>
 

@@ -12,7 +12,6 @@ export function useLocalStore<
 >(
   model: StoreModel | StoreModelInitializer<StoreModel, InitialData>,
   config?: StoreConfig
-): UseLocalStore<StoreModel, InitialData> {
-  const useLocalStore = createComponentStore(model, config);
-  return useLocalStore;
+): ReturnType<UseLocalStore<StoreModel, InitialData>> {
+  return createComponentStore(model, config)();
 }
