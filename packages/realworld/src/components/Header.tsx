@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { APP_NAME } from 'utils/lib';
+import { APP_NAME } from 'utils/constants';
 
 const LoggedOutView = (props: {
   currentUser?: com.hardfist.realworld.User;
