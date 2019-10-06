@@ -6344,19 +6344,6 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-easy-peasy@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/easy-peasy/-/easy-peasy-3.0.0.tgz#eb5775ef8acb34d3ec4e0bbe74ddafc7cfff085b"
-  integrity sha512-O4aU6M3B19FMH2eXX2BuN4/YA0rFSNUedaCwgqkKFfTIlnjrtwEpQD8FTyLEuqfBrytk+4y8yI+fsletM87d+g==
-  dependencies:
-    immer-peasy "3.1.3"
-    memoizerific "^1.11.3"
-    prop-types "^15.6.2"
-    redux "^4.0.4"
-    redux-thunk "^2.3.0"
-    shallowequal "^1.1.0"
-    ts-toolbelt "3.0.0-9"
-
 easy-peasy@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/easy-peasy/download/easy-peasy-3.1.0.tgz#b2989002e7c1e76353b10d5ba3cd5f0880f0d8c2"
@@ -14188,14 +14175,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@^6.3.3, rxjs@^6.4.0:
-  version "6.5.3"
-  resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
-  integrity sha512-wuYsAYYFdWTAnAaPoKGNhfpWwKZbJW+HgAJ+mImp+Epl7BG8oNWBCTyRM8gba9k4lk8BgWdoYm21Mo/RYhhbgA==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.5.3:
+rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.3:
   version "6.5.3"
   resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.5.3.tgz?cache=0&sync_timestamp=1568815682378&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
   integrity sha1-UQ4mMX9NuRp+sd532d2boKSJmjo=
@@ -15752,11 +15732,6 @@ ts-pnp@1.1.4, ts-pnp@^1.1.2:
   version "1.1.4"
   resolved "https://registry.npmjs.org/ts-pnp/-/ts-pnp-1.1.4.tgz#ae27126960ebaefb874c6d7fa4729729ab200d90"
   integrity sha512-1J/vefLC+BWSo+qe8OnJQfWTYRS6ingxjwqmHMqaMxXMj7kFtKLgAaYW3JeX3mktjgUL+etlU8/B4VUAUI9QGw==
-
-ts-toolbelt@3.0.0-9:
-  version "3.0.0-9"
-  resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-3.0.0-9.tgz#02d48d202d7eff6e08e0beab23b57aa2fb64c609"
-  integrity sha512-nFEZWDn4TtgSP1J4dufzaNgXtkuVN5tFZiFPy6fD+At3rHsyjYcdbaM+x12n6GR0Pil1JgO6xIpWF4g8CkSlJw==
 
 ts-toolbelt@^4.7.23:
   version "4.7.24"
