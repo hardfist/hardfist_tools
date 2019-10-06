@@ -2,8 +2,11 @@ import React, { useEffect } from 'react';
 import { useStoreState, useStoreActions } from 'store';
 import styled, { keyframes } from 'styled-components';
 import { Layout } from 'components/layout';
+import { useLocalStore } from 'utils/model';
+import { get_todo_list } from 'service/app';
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 import { useState } from 'react';
+import { todo } from './model';
 const AppWrapper = styled.div`
   text-align: center;
 `;
@@ -41,18 +44,26 @@ const Item = styled.li<{ completed: boolean }>`
 
 export const TodoList: React.FC = () => {
   const [input, setInput] = useState('');
-  const { visible_todo, filter } = useStoreState(state => {
-    return {
-      ...state.todo
-    };
-  });
-  const { addTodo, setFilter, toggleTodo, fetchTodo } = useStoreActions(
-    actions => {
-      return {
-        ...actions.todo
-      };
+  const [
+    { visible_todo, filter },
+    { addTodo, setFilter, toggleTodo, fetchTodo }
+  ] = useLocalStore(todo, {
+    injections: {
+      get_todo_list
     }
-  );
+  });
+  // const { visible_todo, filter } = useStoreState(state => {
+  //   return {
+  //     ...state.todo
+  //   };
+  // });
+  // const { addTodo, setFilter, toggleTodo, fetchTodo } = useStoreActions(
+  //   actions => {
+  //     return {
+  //       ...actions.todo
+  //     };
+  //   }
+  // );
   useEffect(() => {
     fetchTodo();
   }, [fetchTodo]);
