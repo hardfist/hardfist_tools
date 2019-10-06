@@ -6,6 +6,7 @@ import { useLocalStore } from 'utils/model';
 import { get_todo_list } from 'service/app';
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 import { useState } from 'react';
+import { useIntervalCount } from 'utils/hooks';
 import { todo as todoModel } from './todo.model';
 import { counter as counterModel } from './counter.model';
 const AppWrapper = styled.div`
@@ -49,6 +50,7 @@ const Item = styled.li<{ completed: boolean }>`
 
 export const TodoList: React.FC = () => {
   const [input, setInput] = useState('');
+  const count = useIntervalCount(1000);
   const [
     { visible_todo, filter },
     { addTodo, setFilter, toggleTodo, fetchTodo }
@@ -86,6 +88,7 @@ export const TodoList: React.FC = () => {
           <AppHeader>
             <Logo />
             <Text onClick={() => stopCounter()}>timer ellapsed: {counter}</Text>
+            <Text>{count}</Text>
             <form
               onSubmit={e => {
                 e.preventDefault();
