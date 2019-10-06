@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
-import { useStoreState, useStoreActions } from 'store';
+import { useMount } from 'react-use';
 import styled, { keyframes } from 'styled-components';
 import { Layout } from 'components/layout';
 import { useLocalStore } from 'utils/model';
 import { get_todo_list } from 'service/app';
 import { ReactComponent as LogoIcon } from 'assets/logo.svg';
 import { useState } from 'react';
-import { todo } from './model';
+import { todo as todoModel } from './todo.model';
+import { counter as counterModel } from './counter.model';
 const AppWrapper = styled.div`
   text-align: center;
 `;
@@ -26,6 +27,10 @@ from {
   to {
     transform: rotate(360deg);
   }
+`;
+const Text = styled.div`
+  color: red;
+  font-size: 24px;
 `;
 const Logo = styled(LogoIcon)`
   animation: ${app_logo_spin} infinite 20s linear;
@@ -47,11 +52,15 @@ export const TodoList: React.FC = () => {
   const [
     { visible_todo, filter },
     { addTodo, setFilter, toggleTodo, fetchTodo }
-  ] = useLocalStore(todo, {
+  ] = useLocalStore(todoModel, {
     injections: {
       get_todo_list
     }
   });
+  const [
+    { counter },
+    { startCounter, resetCounter, stopCounter }
+  ] = useLocalStore(counterModel);
   // const { visible_todo, filter } = useStoreState(state => {
   //   return {
   //     ...state.todo
@@ -64,6 +73,9 @@ export const TodoList: React.FC = () => {
   //     };
   //   }
   // );
+  useMount(() => {
+    startCounter();
+  });
   useEffect(() => {
     fetchTodo();
   }, [fetchTodo]);
@@ -73,6 +85,7 @@ export const TodoList: React.FC = () => {
         <AppWrapper>
           <AppHeader>
             <Logo />
+            <Text onClick={() => stopCounter()}>timer ellapsed: {counter}</Text>
             <form
               onSubmit={e => {
                 e.preventDefault();

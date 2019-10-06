@@ -1,2 +1,2 @@
-export * from 'components/todo_list/model';
+export * from 'components/todo_list/todo.model';
 export * from 'components/counter/model';
