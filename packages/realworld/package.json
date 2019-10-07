@@ -1,7 +1,6 @@
 {
   "name": "@hardfist/realworld",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/jwt-decode": "^2.2.1",
@@ -30,6 +29,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
   },
   "browserslist": {
     "production": [
