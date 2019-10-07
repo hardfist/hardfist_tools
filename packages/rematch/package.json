@@ -1,15 +1,11 @@
 {
   "name": "@hardfist/rematch",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "echo success"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.com/"
   },
   "publishConfig": {
     "access": "public",
