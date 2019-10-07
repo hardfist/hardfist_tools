@@ -1,6 +1,6 @@
 {
   "name": "@hardfist/realworld",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/jwt-decode": "^2.2.1",

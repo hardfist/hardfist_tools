@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/hardfist/hardfist_boilerplate/compare/@hardfist/ui@1.2.0...@hardfist/ui@1.2.2) (2019-10-07)
+
+**Note:** Version bump only for package @hardfist/ui
+
+
+
+
+
 ## [1.2.1](https://github.com/hardfist/hardfist_boilerplate/compare/@hardfist/ui@1.2.0...@hardfist/ui@1.2.1) (2019-10-07)
 
 **Note:** Version bump only for package @hardfist/ui

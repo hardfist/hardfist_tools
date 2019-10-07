@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.7.0...@hardfist/spa@0.9.0) (2019-10-07)
+
+
+### Features
+
+* **refactor:** change TodoList ([61eba45](https://github.com/hardfist/hardfist_tools/commit/61eba45))
+* **spa:** add interval hook ([57e6545](https://github.com/hardfist/hardfist_tools/commit/57e6545))
+* **spa:** add local state ([27c3750](https://github.com/hardfist/hardfist_tools/commit/27c3750))
+* **spa:** add redux ([a01184b](https://github.com/hardfist/hardfist_tools/commit/a01184b))
+* **spa:** add redux && mobx diff ([53d1c56](https://github.com/hardfist/hardfist_tools/commit/53d1c56))
+* **spa:** add rxjs ([2e6b102](https://github.com/hardfist/hardfist_tools/commit/2e6b102))
+* **spa:** change browserrouter to hashrouter ([5548905](https://github.com/hardfist/hardfist_tools/commit/5548905))
+* **spa:** fix provider missing ([48364cc](https://github.com/hardfist/hardfist_tools/commit/48364cc))
+* **spa:** test model ([a6226e2](https://github.com/hardfist/hardfist_tools/commit/a6226e2))
+* **spa:** update easy-peasy ([732f40a](https://github.com/hardfist/hardfist_tools/commit/732f40a))
+* **spa:** 用ease-peasy重构 ([0f0fee1](https://github.com/hardfist/hardfist_tools/commit/0f0fee1))
+* **spa:** 简化selector ([6ce2d05](https://github.com/hardfist/hardfist_tools/commit/6ce2d05))
+* add realworld ([ff42c4d](https://github.com/hardfist/hardfist_tools/commit/ff42c4d))
+* add use-immer ([b9a3dc0](https://github.com/hardfist/hardfist_tools/commit/b9a3dc0))
+* tmp ([7fd4965](https://github.com/hardfist/hardfist_tools/commit/7fd4965))
+* **spa:** 重构 ([3320f36](https://github.com/hardfist/hardfist_tools/commit/3320f36))
+
+
+
+
+
 # [0.8.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.7.0...@hardfist/spa@0.8.0) (2019-10-07)
 
 
