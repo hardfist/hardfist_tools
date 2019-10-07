@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { observer, useLocalStore } from 'mobx-react';
 import { useLocalStore as useLocalStore2 } from 'utils/model';
 import styled from 'styled-components';
@@ -81,7 +81,7 @@ function TodoList(props: {
   doneTodos: string[];
   toggleTodo: (todo: string) => void;
 }) {
-  const todoRef = React.useRef<HTMLInputElement>(null);
+  const [text, setText] = useState('');
   const { toggleTodo, addTodo, pendingTodos, doneTodos } = props;
   const renderTodo = (done: boolean) => (todo: string) => (
     <Todo key={todo} done={done} onClick={() => toggleTodo(todo)}>
@@ -92,14 +92,14 @@ function TodoList(props: {
     <form
       onSubmit={e => {
         e.preventDefault();
-        addTodo(todoRef.current!.value);
-        todoRef.current!.value = '';
+        addTodo(text);
+        setText('');
       }}
     >
       {pendingTodos.map(renderTodo(false))}
       {doneTodos.map(renderTodo(true))}
       <br />
-      <input ref={todoRef} />
+      <input value={text} onChange={e => setText(e.target.value)} />
       <button>Add todo</button>
     </form>
   );
