@@ -25,5 +25,12 @@ export const routes = [
     component: loadable(
       wrapDefault(() => import('pages/redux_mobx'), 'TodoListWrapper')
     )
+  },
+  {
+    path: '/search/pending',
+    exact: true,
+    component: loadable(
+      wrapDefault(() => import('pages/search/SignupForm'), 'SignupForm')
+    )
   }
 ];
