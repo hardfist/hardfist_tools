@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.9.0...@hardfist/spa@0.9.1) (2019-10-07)
+
+**Note:** Version bump only for package @hardfist/spa
+
+
+
+
+
 # [0.9.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/spa@0.7.0...@hardfist/spa@0.9.0) (2019-10-07)
 
 
