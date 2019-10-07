@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/hardfist/hardfist_tools/compare/@hardfist/api@1.3.0...@hardfist/api@1.3.1) (2019-10-07)
+
+
+### Bug Fixes
+
+* **api:** change api to public ([75ee00e](https://github.com/hardfist/hardfist_tools/commit/75ee00e))
+
+
+
+
+
 # 1.3.0 (2019-10-07)
 
 
