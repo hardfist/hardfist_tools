@@ -1,5 +1,5 @@
 import React from 'react';
-import { LocalCounter, ContextCounter, ReduxCounter } from 'components/counter';
+import { LocalCounter, ContextCounter } from 'components/counter';
 import { CounterContext } from 'components/counter/hooks';
 
 export const Local = () => {

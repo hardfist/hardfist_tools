@@ -14,6 +14,7 @@ const everySecond$ = timer(0, 1000).pipe(takeUntil(unsubscribe$));
 export const counter: CounterModel = {
   counter: 0,
   startCounter: thunk(actions => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     everySecond$.subscribe(actions.incrementCounter as any);
   }),
   stopCounter: thunk(() => {

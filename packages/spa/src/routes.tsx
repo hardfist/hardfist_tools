@@ -18,5 +18,12 @@ export const routes = [
     component: loadable(
       wrapDefault(() => import('pages/todo_list'), 'TodoList')
     )
+  },
+  {
+    path: '/redux_mobx',
+    exact: true,
+    component: loadable(
+      wrapDefault(() => import('pages/redux_mobx'), 'TodoListWrapper')
+    )
   }
 ];

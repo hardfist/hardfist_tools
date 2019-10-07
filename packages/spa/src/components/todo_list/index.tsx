@@ -59,10 +59,9 @@ export const TodoList: React.FC = () => {
       get_todo_list
     }
   });
-  const [
-    { counter },
-    { startCounter, resetCounter, stopCounter }
-  ] = useLocalStore(counterModel);
+  const [{ counter }, { startCounter, stopCounter }] = useLocalStore(
+    counterModel
+  );
   // const { visible_todo, filter } = useStoreState(state => {
   //   return {
   //     ...state.todo

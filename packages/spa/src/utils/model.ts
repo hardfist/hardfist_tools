@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   createComponentStore,
   EasyPeasyConfig,
@@ -7,6 +8,7 @@ import {
 
 export function useLocalStore<
   StoreModel extends object = {},
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   InitialData = any,
   StoreConfig extends EasyPeasyConfig<any, any> = any
 >(

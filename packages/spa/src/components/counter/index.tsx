@@ -42,6 +42,5 @@ export const LocalCounter = () => {
 };
 export const ReduxCounter = () => {
   const [state, actions] = useReduxCounter();
-  console.log('state,', state, actions);
   return renderCounter(state, actions);
 };

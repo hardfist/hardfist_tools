@@ -10,7 +10,6 @@ interface CounterModel {
 export const counter: CounterModel = {
   count: 1,
   inc: action((state, cnt) => {
-    console.log('newState:', state, state.count);
     state.count += cnt;
   }),
   async_inc: thunk(async (actions, cnt) => {
