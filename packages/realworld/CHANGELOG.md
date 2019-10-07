@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/hardfist/hardfist_tools/compare/@hardfist/realworld@0.4.0...@hardfist/realworld@0.4.1) (2019-10-07)
+
+
+### Bug Fixes
+
+* **realworld:** fix publiurl ([dbc6d7c](https://github.com/hardfist/hardfist_tools/commit/dbc6d7c))
+
+
+
+
+
 # [0.4.0](https://github.com/hardfist/hardfist_tools/compare/@hardfist/realworld@0.3.1...@hardfist/realworld@0.4.0) (2019-10-07)
 
 
