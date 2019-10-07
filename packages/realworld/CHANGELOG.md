@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/hardfist/hardfist_tools/compare/@hardfist/realworld@0.3.0...@hardfist/realworld@0.3.1) (2019-10-07)
+
+**Note:** Version bump only for package @hardfist/realworld
+
+
+
+
+
 # 0.3.0 (2019-10-07)
 
 
