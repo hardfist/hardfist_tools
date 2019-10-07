@@ -16,5 +16,9 @@
     "fastify": "^2.7.1",
     "ts-node": "^8.3.0"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
+  },
   "gitHead": "c283963882e147fdc0d332e3419257ce40df77b2"
 }
