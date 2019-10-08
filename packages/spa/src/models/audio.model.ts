@@ -1,11 +1,4 @@
-import {
-  Action,
-  action,
-  ActionOn,
-  actionOn,
-  thunkOn,
-  ThunkOn
-} from 'easy-peasy';
+import { Action, action, thunkOn, ThunkOn } from 'easy-peasy';
 import * as StoreModel from 'models';
 export interface AuditModel {
   logs: string[];
