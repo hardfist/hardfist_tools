@@ -1,0 +1,24 @@
+{
+  "name": "@hardfist/hardfist-cli",
+  "version": "1.0.0",
+  "description": "@hardfist/hardfist-cli",
+  "main": "lib/index.js",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "types": "dist/hardfist-cli.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hardfist/hardfist_tools"
+  },
+  "keyworkds": [
+    "vue"
+  ],
+  "author": "hardfist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hardfist/hardfist_tools/issues"
+  },
+  "homepage": "https://github.com/hardfist/hardfist_tools/blob/master/packages/hardfist-cli/README.md"
+}
