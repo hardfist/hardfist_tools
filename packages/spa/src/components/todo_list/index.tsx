@@ -47,21 +47,21 @@ const Item = styled.li<{ completed: boolean }>`
   color: rgba(0, 0, 0, 0.8);
   text-decoration: ${p => (p.completed ? 'line-through' : 'none')};
 `;
-
+const storeModel = {
+  ...todoModel,
+  ...counterModel
+};
 export const TodoList: React.FC = () => {
   const [input, setInput] = useState('');
   const count = useIntervalCount(1000);
   const [
-    { visible_todo, filter },
-    { addTodo, setFilter, toggleTodo, fetchTodo }
-  ] = useLocalStore(todoModel, {
+    { visible_todo, filter, counter },
+    { addTodo, setFilter, toggleTodo, fetchTodo, startCounter, stopCounter }
+  ] = useLocalStore(storeModel, {
     injections: {
       get_todo_list
     }
   });
-  const [{ counter }, { startCounter, stopCounter }] = useLocalStore(
-    counterModel
-  );
   // const { visible_todo, filter } = useStoreState(state => {
   //   return {
   //     ...state.todo
