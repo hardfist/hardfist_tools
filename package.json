@@ -10,7 +10,7 @@
     "commit": "git-cz",
     "clean": "lerna run --stream clean",
     "build": "CI=false lerna run --stream  build",
-    "test": "lerna run --stream test",
+    "test": "node scripts/test.js",
     "bump": "lerna version",
     "release": "lerna publish from-package",
     "release:next": "lerna publish --bump=prerelease",
@@ -62,6 +62,7 @@
     "husky": "^3.0.7",
     "lerna": "^3.13.1",
     "lint-staged": "^9.4.0",
+    "minimist": "^1.2.0",
     "prettier": "^1.18.2",
     "typescript": "^3.5.2"
   }
