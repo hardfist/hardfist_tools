@@ -13881,6 +13881,11 @@ ts-toolbelt@^4.7.23:
   resolved "https://registry.npm.taobao.org/ts-toolbelt/download/ts-toolbelt-4.7.24.tgz#9e150a552bed3618c385d0fb276127937f473ff2"
   integrity sha1-nhUKVSvtNhjDhdD7J2Enk39HP/I=
 
+ts-toolbelt@^4.8.8:
+  version "4.8.8"
+  resolved "https://registry.npm.taobao.org/ts-toolbelt/download/ts-toolbelt-4.8.8.tgz#0ed56ab46cf0c12c11156076a68f1caf1fd9d55c"
+  integrity sha1-DtVqtGzwwSwRFWB2po8crx/Z1Vw=
+
 tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.10.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
