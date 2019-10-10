@@ -1,0 +1,25 @@
+{
+  "name": "@hardfist/bundle",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "bin": "bin.js",
+  "buildOptions": {
+    "name": "Vue",
+    "formats": [
+      "esm",
+      "cjs",
+      "umd"
+    ]
+  },
+  "dependencies": {
+    "execa": "^2.1.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
+}
