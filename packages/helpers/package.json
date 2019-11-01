@@ -1,34 +1,30 @@
 {
   "name": "@hardfist/helpers",
-  "version": "1.0.4",
-  "description": "> TODO: description",
-  "author": "hardfist <1562502418@qq.com>",
-  "homepage": "https://github.com/hardfist/hardfist_boilerplate#readme",
-  "license": "ISC",
-  "main": "lib/helpers.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "hardfist",
+  "main": "dist/index.js",
+  "module": "dist/helpers.esm.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "lib"
+    "dist"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hardfist/hardfist_boilerplate.git"
-  },
   "scripts": {
-    "test": "echo success"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint"
   },
-  "bugs": {
-    "url": "https://github.com/hardfist/hardfist_boilerplate/issues"
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
   },
-  "dependencies": {
-    "lodash": "^4.17.11"
-  },
-  "gitHead": "59c0197e29b0f70d2942a6483c1e9cc879b4f9cd"
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
 }

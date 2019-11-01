@@ -15,10 +15,26 @@
   "keyworkds": [
     "vue"
   ],
+  "bin": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json"
+  },
   "author": "hardfist",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hardfist/hardfist_tools/issues"
   },
-  "homepage": "https://github.com/hardfist/hardfist_tools/blob/master/packages/hardfist-cli/README.md"
+  "homepage": "https://github.com/hardfist/hardfist_tools/blob/master/packages/hardfist-cli/README.md",
+  "dependencies": {
+    "@types/yargs": "^13.0.3",
+    "@vue/cli": "^4.0.3",
+    "commander": "2.20",
+    "fs-extra": "^8.1.0",
+    "sade": "^1.6.1",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "tsdx": "^0.10.5"
+  }
 }

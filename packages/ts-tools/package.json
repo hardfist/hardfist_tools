@@ -1,9 +1,0 @@
-{
-  "name": "@hardfist/ts-tools",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "ts-toolbelt": "^4.8.8"
-  }
-}
