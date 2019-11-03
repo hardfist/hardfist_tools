@@ -12,6 +12,7 @@ import typescript from 'rollup-plugin-typescript2';
 import peerDep from 'rollup-plugin-peer-deps-external';
 import builtins from 'rollup-plugin-node-builtins';
 import copy from 'rollup-plugin-copy';
+import del from 'rollup-plugin-delete';
 
 function createConfig(output, production) {
   return {
@@ -30,6 +31,9 @@ function createConfig(output, production) {
     ],
     external: ['lodash-es', 'lodash-es/map', 'the-answer'],
     plugins: [
+      del({
+        targets: ['dist/*', 'lib/*'],
+      }),
       builtins(),
       copy({
         targets: [
