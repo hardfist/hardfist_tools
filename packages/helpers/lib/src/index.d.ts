@@ -1,1 +1,1 @@
-export declare function myanswer(str: string): Promise<void>;
+export declare function test(str: string): Promise<void>;

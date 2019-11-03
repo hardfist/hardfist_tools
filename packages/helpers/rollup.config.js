@@ -1,6 +1,8 @@
 /* eslint-disable import/no-default-export */
 import resolve from 'rollup-plugin-node-resolve';
 import visualizer from 'rollup-plugin-visualizer';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
+import babel from 'rollup-plugin-babel';
 import path from 'path';
 import sizes from 'rollup-plugin-sizes';
 import filesize from 'rollup-plugin-filesize';
@@ -12,11 +14,10 @@ import typescript from 'rollup-plugin-typescript2';
 import peerDep from 'rollup-plugin-peer-deps-external';
 import builtins from 'rollup-plugin-node-builtins';
 import copy from 'rollup-plugin-copy';
-// import del from 'rollup-plugin-delete';
 
 function createConfig(output, production) {
   return {
-    input: 'src/index.ts',
+    input: 'src/index.js',
     output: [
       {
         file: output,
@@ -31,9 +32,6 @@ function createConfig(output, production) {
     ],
     external: ['lodash-es', 'lodash-es/map', 'the-answer'],
     plugins: [
-      // del({
-      //   targets: ['dist/*', 'lib/*'],
-      // }),
       builtins(),
       copy({
         targets: [
@@ -43,6 +41,13 @@ function createConfig(output, production) {
           },
         ],
       }),
+      babel(),
+      typescript({
+        check: process.env.NODE_ENV === 'production',
+        tsconfig: path.resolve('tsconfig.json'),
+        tsconfigOverride: {},
+        objectHashIgnoreUnknownHack: true,
+      }),
       commonjs(),
       resolve({
         preferBuiltins: true,
@@ -50,12 +55,7 @@ function createConfig(output, production) {
       }),
       json(),
       peerDep(),
-      typescript({
-        check: process.env.NODE_ENV === 'production',
-        tsconfig: path.resolve('tsconfig.json'),
-        tsconfigOverride: {},
-        objectHashIgnoreUnknownHack: true,
-      }),
+
       sourcemap(),
       visualizer(),
       sizes(),
