@@ -1,4 +1,5 @@
 import resolve from 'rollup-plugin-node-resolve';
+import visualizer from 'rollup-plugin-visualizer';
 // eslint-disable-next-line import/no-default-export
 export default {
   input: 'src/index.js',
@@ -11,5 +12,5 @@ export default {
     },
   },
   external: ['lodash-es', 'lodash-es/map', 'the-answer'],
-  plugins: [resolve()],
+  plugins: [resolve(), visualizer()],
 };
