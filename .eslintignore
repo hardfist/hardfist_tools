@@ -1,1 +1,2 @@
 dist/**/*.js
+packages/helpers/lib/**/*.js
