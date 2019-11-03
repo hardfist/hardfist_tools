@@ -32,6 +32,7 @@
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sizes": "^0.5.1",
     "rollup-plugin-visualizer": "^2.7.0",
     "the-answer": "^1.0.0"
   }
