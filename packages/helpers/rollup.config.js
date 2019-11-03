@@ -10,6 +10,7 @@ import sourcemap from 'rollup-plugin-sourcemaps';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 import peerDep from 'rollup-plugin-peer-deps-external';
+import builtins from 'rollup-plugin-node-builtins';
 
 function createConfig(output, production) {
   return {
@@ -28,8 +29,12 @@ function createConfig(output, production) {
     ],
     external: ['lodash-es', 'lodash-es/map', 'the-answer'],
     plugins: [
+      builtins(),
       commonjs(),
-      resolve(),
+      resolve({
+        preferBuiltins: true,
+        browser: true,
+      }),
       json(),
       peerDep(),
       typescript({
