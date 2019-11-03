@@ -9,13 +9,13 @@
   "scripts": {
     "commit": "git-cz",
     "clean": "lerna run --stream clean",
-    "build": "CI=false lerna run --stream  build",
+    "build": "CI=false echo success",
     "test": "node scripts/test.js",
     "bump": "lerna version",
     "release": "lerna publish from-package",
     "release:next": "lerna publish --bump=prerelease",
     "release:canary": "lerna publish --canary --yes",
-    "lerna-prepare": "lerna run build",
+    "lerna-prepare": "yarn build",
     "bootstrap": "yarn lerna-prepare",
     "prebootstrap": "yarn"
   },
