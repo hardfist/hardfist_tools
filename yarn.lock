@@ -11445,10 +11445,10 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.14:
+lodash-es@^4.17.14, lodash-es@^4.17.15:
   version "4.17.15"
-  resolved "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+  resolved "https://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+  integrity sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
 
 lodash-id@^0.14.0:
   version "0.14.0"
@@ -15459,10 +15459,10 @@ rollup-plugin-json@^4.0.0:
   dependencies:
     rollup-pluginutils "^2.5.0"
 
-rollup-plugin-node-resolve@^5.0.0:
+rollup-plugin-node-resolve@^5.0.0, rollup-plugin-node-resolve@^5.2.0:
   version "5.2.0"
-  resolved "https://registry.npmjs.org/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-5.2.0.tgz#730f93d10ed202473b1fb54a5997a7db8c6d8523"
-  integrity sha512-jUlyaDXts7TW2CqQ4GaO5VJ4PwwaV8VUGA7+km3n6k6xtOEacf61u0VXwN80phY/evMcaS+9eIeJ9MOyDxt5Zw==
+  resolved "https://registry.npm.taobao.org/rollup-plugin-node-resolve/download/rollup-plugin-node-resolve-5.2.0.tgz#730f93d10ed202473b1fb54a5997a7db8c6d8523"
+  integrity sha1-cw+T0Q7SAkc7H7VKWZen24xthSM=
   dependencies:
     "@types/resolve" "0.0.8"
     builtin-modules "^3.1.0"
@@ -16938,6 +16938,11 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+the-answer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/the-answer/download/the-answer-1.0.0.tgz#6dbc4c9db469d4f437120b09e44700fc320f170b"
+  integrity sha1-bbxMnbRp1PQ3EgsJ5EcA/DIPFws=
 
 thenify-all@^1.0.0:
   version "1.6.0"
