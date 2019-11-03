@@ -11,6 +11,7 @@ import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 import peerDep from 'rollup-plugin-peer-deps-external';
 import builtins from 'rollup-plugin-node-builtins';
+import copy from 'rollup-plugin-copy';
 
 function createConfig(output, production) {
   return {
@@ -30,6 +31,14 @@ function createConfig(output, production) {
     external: ['lodash-es', 'lodash-es/map', 'the-answer'],
     plugins: [
       builtins(),
+      copy({
+        targets: [
+          {
+            src: 'index.html',
+            dest: 'lib/',
+          },
+        ],
+      }),
       commonjs(),
       resolve({
         preferBuiltins: true,
