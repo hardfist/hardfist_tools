@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.left {
+    border-radius: 8px;
+    margin-right: 24px;
+}
+
+.right {
+    width: 860px;
+    flex: 1
+}
+
+.hide {
+    display: none;
+}
+
+.back {
+    bottom: 40px;
+    right: calc(50vw - 680px);
+    .top {
+        width: 54px;
+        height: 54px;
+        background: #fff;
+        box-shadow: 0 8px 20px 0 rgba(20, 26, 38, 0.04);
+        border-radius: 27px;
+        text-align: center;
+        line-height: 54px;
+        :global {
+            .icon-zhidingtop {
+                font-size: 24px;
+            }
+        }
+    }
+}

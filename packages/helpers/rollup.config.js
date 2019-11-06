@@ -2,6 +2,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import visualizer from 'rollup-plugin-visualizer';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
+import postcss from 'rollup-plugin-postcss';
 import babel from 'rollup-plugin-babel';
 import path from 'path';
 import sizes from 'rollup-plugin-sizes';
@@ -17,7 +18,7 @@ import copy from 'rollup-plugin-copy';
 
 function createConfig(output, production) {
   return {
-    input: 'src/index.js',
+    input: 'src/index.tsx',
     output: [
       {
         file: output,
@@ -33,6 +34,10 @@ function createConfig(output, production) {
     external: ['lodash-es', 'lodash-es/map', 'the-answer'],
     plugins: [
       builtins(),
+      postcss({
+        extract: true,
+        modules: true,
+      }),
       copy({
         targets: [
           {
